@@ -23,6 +23,19 @@ public:
         if((FRONT == 0 && REAR == max - 1) || (FRONT == REAR + 1)){
             cout << "\nQueue overflow";
         }
+
+        if(FRONT == -1){
+            FRONT = 0; // 2.a
+            REAR = 0; // 2.b
+        }
+        else{
+            // Jika REAR berada di posisi terahir array, kembalu ke awal array
+            if (REAR == max - 1)
+                REAR = 0;
+            else
+                REAR = REAR + 1;       
+        }
+        queue_array[REAR] = num;
     }
 
 };
