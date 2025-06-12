@@ -61,6 +61,9 @@ public:
     }
 
     void display(){
+        int FORONT_position = FRONT;
+        int REAR_position = REAR;
+
         
     }
 
